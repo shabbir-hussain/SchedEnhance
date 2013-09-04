@@ -1,0 +1,21 @@
+{
+   "name": "SchedEnhance",
+   "description": "An Extention to colorize the Mcgill Schedule from minerva",
+   "icons": {
+      "128": "images/sch128.png",
+      "48": "images/sch128.png"	  
+   },
+   "version": "1.0",
+   "manifest_version": 2,
+   "content_scripts": [ {
+      "all_frames": true,
+
+      "js": [ "scripts/schedEnhance.js" ],
+      "matches": [ "http://*/*P_CrseSchd", "https://*/*P_CrseSchd" ],
+      "run_at": "document_end"
+   }
+   ],
+   "minimum_chrome_version": "26.0.0.0",
+   "permissions": [ "http://*/*", "https://*/*"],
+   "web_accessible_resources": [ "*" ]
+}
